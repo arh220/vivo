@@ -163,7 +163,7 @@ const Navbar = ({ scrolled }) => {
             onMouseLeave={() => setIsDropDownOpen(false)}
           >
             <UserIcon
-              className={`w-7 h-7 cursor-pointer transition-colors duration-300 hover:text-[rgba(65,95,255,0.73)] ${
+              className={`w-7 h-7 cursor-pointer transition-colors duration-300 hover:text-[rgba(65,95,255,0.73)] hover:pl-3 ${
                 scrolled ? "text-gray-800" : "text-white"
               }`}
             />
