@@ -21,7 +21,7 @@ const Layout = ({ children }) => {
       </div>
 
       <Navbar scrolled={scrolled} />
-      <main className="pt-[80px]">{children}</main>
+      <main className="flex-1">{children}</main>
       <Footer />
     </div>
   );
