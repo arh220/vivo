@@ -16,7 +16,7 @@ const Home = () => {
                 alt="aaa"
               />
             </div>
-            <div className="inline-block overflow-hidden rounded-3xl w-full">
+            <div className="rounded-3xl w-full">
               <img
                 className="mt-10 object-cover rounded-3xl w-[100%] transform transition-transform duration-1000 ease-in-out hover:scale-105"
                 src="../../../img/3.jpg"
