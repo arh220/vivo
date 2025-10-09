@@ -12,11 +12,11 @@ const Layout = ({ children }) => {
   }, []);
   return (
     <div className="flex flex-col min-h-screen">
-      <div className="relative w-full h-full">
+      <div className="relative w-full ">
         <img
           src="../../../img/1.jpg"
           alt="Banner"
-          className="w-full h-full object-cover"
+          className="w-full h-full  object-cover"
         />
       </div>
 

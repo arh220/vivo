@@ -8,7 +8,7 @@ const User = ({ className }) => {
       xmlnsXlink="http://www.w3.org/1999/xlink"
       viewBox="0 0 28 28"
       tabIndex="-1"
-      ariaHidden="true"
+      aria-hidden="true"
     >
       <title>个人中心_导航</title>
       <desc>Created with Sketch.</desc>

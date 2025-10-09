@@ -14,12 +14,12 @@ const Navbar = ({ scrolled }) => {
 
   return (
     <header
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 overflow-hidden z-50 flex justify-center items-center w-full h-[60px] min-[1199px]:h-[86px] ${
         scrolled ? "bg-white shadow-md" : "bg-transparent"
       }`}
     >
-      <nav className="max-w-7xl mx-auto flex items-center justify-between py-5 px-4 md:px-6 lg:px-10">
-        <div className="md:hidden">
+      <nav className="w-full max-2xl:mx-20 max-[1199px]:!mx-10 2xl:max-w-[1440px] flex items-center justify-between gap-10">
+        <div className="min-[1199px]:hidden">
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`focus:outline-none ${
@@ -33,24 +33,22 @@ const Navbar = ({ scrolled }) => {
             )}
           </button>
         </div>
-
-        <div className="flex items-center">
+        <div className="flex items-center justify-center">
           <Logo
-            className={`w-[104px] h-[28px] transition-colors duration-300 hover:text-[rgba(65,95,255,0.73)] ${
+            className={`w-[104px] transition-colors duration-300 hover:text-[rgba(65,95,255,0.73)] ${
               scrolled ? "text-gray-800" : "text-white"
             }`}
           />
         </div>
 
-        {/* Desktop */}
         <div
-          className={`hidden md:flex items-center space-x-10 font-medium transition-colors duration-300 ${
+          className={`hidden min-[1199px]:flex items-center gap-10 font-medium transition-colors duration-300 ${
             scrolled ? "text-gray-800" : "text-white"
           }`}
         >
           <Link
             to="/"
-            className="transition hover:text-[rgba(65,95,255,0.73)]"
+            className="transition hover:text-[rgba(65,95,255,0.73)] text-nowrap"
             style={{
               fontFamily: "'vivoSansSC', 'Montserrat', sans-serif",
               fontWeight: 500,
@@ -63,7 +61,7 @@ const Navbar = ({ scrolled }) => {
           </Link>
           <Link
             to="/products"
-            className="transition hover:text-[rgba(65,95,255,0.73)]"
+            className="transition hover:text-[rgba(65,95,255,0.73)] text-nowrap"
             style={{
               fontFamily: "'vivoSansSC', 'Montserrat', sans-serif",
               fontWeight: 500,
@@ -76,7 +74,7 @@ const Navbar = ({ scrolled }) => {
           </Link>
           <Link
             to="/estore"
-            className="transition hover:text-[rgba(65,95,255,0.73)]"
+            className="transition hover:text-[rgba(65,95,255,0.73)] text-nowrap"
             style={{
               fontFamily: "'vivoSansSC', 'Montserrat', sans-serif",
               fontWeight: 500,
@@ -89,7 +87,7 @@ const Navbar = ({ scrolled }) => {
           </Link>
           <Link
             to="/exclusive"
-            className="transition hover:text-[rgba(65,95,255,0.73)]"
+            className="transition hover:text-[rgba(65,95,255,0.73)] text-nowrap"
             style={{
               fontFamily: "'vivoSansSC', 'Montserrat', sans-serif",
               fontWeight: 500,
@@ -102,7 +100,7 @@ const Navbar = ({ scrolled }) => {
           </Link>
           <Link
             to="/community"
-            className="transition hover:text-[rgba(65,95,255,0.73)]"
+            className="transition hover:text-[rgba(65,95,255,0.73)] text-nowrap"
             style={{
               fontFamily: "'vivoSansSC', 'Montserrat', sans-serif",
               fontWeight: 500,
@@ -115,7 +113,7 @@ const Navbar = ({ scrolled }) => {
           </Link>
           <Link
             to="/support"
-            className="transition hover:text-[rgba(65,95,255,0.73)]"
+            className="transition hover:text-[rgba(65,95,255,0.73)] text-nowrap"
             style={{
               fontFamily: "'vivoSansSC', 'Montserrat', sans-serif",
               fontWeight: 500,
@@ -128,7 +126,7 @@ const Navbar = ({ scrolled }) => {
           </Link>
           <Link
             to="/funtouch"
-            className="transition hover:text-[rgba(65,95,255,0.73)]"
+            className="transition hover:text-[rgba(65,95,255,0.73)] text-nowrap"
             style={{
               fontFamily: "'vivoSansSC', 'Montserrat', sans-serif",
               fontWeight: 500,
@@ -141,7 +139,7 @@ const Navbar = ({ scrolled }) => {
           </Link>
           <Link
             to="/"
-            className="transition hover:text-[rgba(65,95,255,0.73)]"
+            className="transition hover:text-[rgba(65,95,255,0.73)] text-nowrap hidden min-[1280px]:block"
             style={{
               fontFamily: "'vivoSansSC', 'Montserrat', sans-serif",
               fontWeight: 500,
@@ -154,7 +152,7 @@ const Navbar = ({ scrolled }) => {
           </Link>
           <Link
             to="/"
-            className="transition hover:text-[rgba(65,95,255,0.73)]"
+            className="transition hover:text-[rgba(65,95,255,0.73)] text-nowrap hidden min-[1370px]:block"
             style={{
               fontFamily: "'vivoSansSC', 'Montserrat', sans-serif",
               fontWeight: 500,
@@ -205,22 +203,29 @@ const Navbar = ({ scrolled }) => {
           </div>
         </div>
       </nav>
+      {/* mobile view header*/}
+      <div
+        className={`md:hidden fixed top-0 left-0 w-full bg-white z-50 overflow-y-auto flex flex-col transform transition-transform duration-500 ease-in-out ${
+          isMobileMenuOpen ? "translate-y-0" : "-translate-y-full"
+        }`}
+      >
+        <div className="flex justify-between items-center p-6 border-b border-gray-200">
+          <Logo className="w-[104px] h-[28px]" />
 
-      {/* mobile Menu */}
-      {isMobileMenuOpen && (
-        <div className="md:hidden fixed top-0 left-0 w-full h-screen bg-white z-50 overflow-y-auto flex flex-col">
-          {/*mobile Header */}
-          <div className="flex justify-between items-center p-6 border-b border-gray-200">
-            <Logo className="w-[104px] h-[28px]" />
-            <button
-              onClick={() => setIsMobileMenuOpen(false)}
-              className="text-3xl focus:outline-none"
-            >
-              &times;
-            </button>
+          <div className="flex items-center space-x-4">
+            <SearchIcon className="w-7 cursor-pointer transition-colors" />
+            <UserIcon className="w-7 cursor-pointer transition-colors" />
           </div>
 
-          {/*mobile Links */}
+          <button
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="focus:outline-none text-gray-800 "
+          >
+            <HiOutlineX className="w-7 h-7" />
+          </button>
+        </div>
+
+        <div>
           <ul className="flex flex-col space-y-6 p-6 text-lg flex-1">
             <li>
               <Link to="/" className="hover:text-[rgba(65,95,255,0.73)]">
@@ -245,7 +250,7 @@ const Navbar = ({ scrolled }) => {
                 to="/exclusive"
                 className="hover:text-[rgba(65,95,255,0.73)]"
               >
-                Vivo Exclusive store
+                Vivo Exclusive Store
               </Link>
             </li>
             <li>
@@ -280,12 +285,12 @@ const Navbar = ({ scrolled }) => {
               </Link>
             </li>
           </ul>
-
-          <div className="p-6 border-t border-gray-200 text-sm text-gray-500">
-            India | Select country/region
-          </div>
         </div>
-      )}
+
+        <div className="p-6 border-t border-gray-200 text-sm text-gray-500">
+          India | Select country/region
+        </div>
+      </div>
     </header>
   );
 };

@@ -4,7 +4,7 @@ const Search = ({ className }) => {
   return (
     <svg
       className={className}
-      ariaHidden="true"
+      aria-hidden="true"
       tabIndex="-1"
       viewBox="0 0 28 28"
       version="1.1"
