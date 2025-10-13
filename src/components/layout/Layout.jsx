@@ -1,28 +1,27 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
+import "./layout.css";
 import Navbar from "../navbar/Navbar";
 import Footer from "../footer/Footer";
 
-const Layout = ({ children }) => {
-  const [scrolled, setScrolled] = useState(false);
+const Layout = ({ scrolled, children }) => {
+  const [isScrolled, setIsScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
+    const handleScroll = () => setIsScrolled(window.scrollY > 50);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
   return (
-    <div className="flex flex-col min-h-screen">
-      <div className="relative w-full ">
-        <img
-          src="../../../img/1.jpg"
-          alt="Banner"
-          className="w-full h-full  object-cover"
-        />
+    <div className="container">
+      <div className="headimg">
+        <img src="/img/1.jpg" alt="Banner" />
+        <div className="navbar-overlay">
+          <Navbar scrolled={isScrolled} />
+        </div>
+        <div>
+          <Footer />
+        </div>
       </div>
-
-      <Navbar scrolled={scrolled} />
-      <main className="flex-1">{children}</main>
-      <Footer />
     </div>
   );
 };
