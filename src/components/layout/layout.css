@@ -8,12 +8,12 @@
   width: 100%;
   max-width: 100%;
   position: relative;
-border: 2px solid red;
+/* border: 2px solid red; */
 }
 .headimg{
   width: 100%;
   position: relative;
-border:  1px solid blue;  
+/* border:  1px solid blue;   */
 }
 .headimg img{
   width: 100%;
@@ -23,7 +23,7 @@ border:  1px solid blue;
   top: 0;
   left: 0;
   width: 100%;
-  border: 2px solid yellow;
+  /* border: 2px solid yellow; */
   display: flex;
   justify-content: center;
 height: 86px;
@@ -33,19 +33,34 @@ height: 86px;
   position: fixed;
   top: 0;
   left: 0;
+  /* overflow: hidden; */
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 86px;
-  overflow: hidden;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
   background-color: transparent;
-  border: 2px solid green;
-
+  color: white; 
+  transition: background-color 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
 }
+
+/* @media (min-width: 1199px) {
+  .mainhead {
+    height: 86px;
+  }
+} */
 
 .mainhead.scrolled {
-  background-color: #fff;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #ffffff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: #1f2937; 
 }
+
+.mainhead.scrolled * {
+  color: #1f2937 !important;
+}
+
 
 .navbar-wrapper {
   display: flex;
@@ -56,11 +71,11 @@ height: 86px;
   padding: 10px 20px;
   color: white;
   width: 100%;
-  border: 2px solid blueviolet;
+  /* border: 2px solid blueviolet; */
 }
 
 .logo{
-  border:1px solid greenyellow;
+  /* border:1px solid greenyellow; */
   width: 104px;
   cursor: pointer;
 }
@@ -70,10 +85,11 @@ height: 86px;
 .brgmenu{
  font-size:28px;
   cursor: pointer;
+  display: none;
 }
-.menu{
+/* .menu{
   border: 1px solid orange;
-}
+} */
   
 .menu ul{
   display: flex;
@@ -87,22 +103,170 @@ height: 86px;
 .menu ul li:hover{
    color: rgba(65, 95, 255, .73);
    cursor: pointer;
+
 }
 
-.icons{
-  border: 1px solid palevioletred;
+
+.icons-container {
   display: flex;
-align-items: center;
-gap: 35px;
+  align-items: center;
+  gap: 24px; 
+  position: relative;
 }
 
-.icon{
+.icon {
   width: 28px;
   height: 28px;
   cursor: pointer;
+  color: white;
 }
-@media(max-width:1197px){
-.menu{
+
+.icon:hover {
+  color: rgba(65, 95, 255, 0.73); 
+}
+.user-icon-wrapper {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-top: 40px; 
+  z-index: 50;
+}
+
+.dropdown ul {
+  width: 176px; 
+  background-color: #ffffff;
+  border-radius: 8px;
+  color: #1f2937;
+}
+
+.dropdown ul li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  font-size: 12px;
+  border-bottom: 1px solid #e2e2e2;
+  cursor: pointer;
+}
+
+.dropdown ul li:hover {
+  color: rgba(65, 95, 255, 0.73);
+}
+@media(max-width:1203px){
+.lihide{
   display: none;
 }
+.brgmenu{
+  display: block;
+}
+}
+@media(max-width:1352px){
+  .iqooo{
+display: none
+
+  }
+}
+@media(max-width:1325px){
+  .expvivo{
+    display: none;
+  }
+}
+
+
+/* mobile menu */
+
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  transform: translateY(-100%); 
+  transition: transform 0.5s ease-in-out,opacity 0.5s ease-in-out; 
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none; 
+  /* border: 1px solid red; */
+  display: none;
+}
+
+.mobile-menu.open {
+  transform: translateY(0); 
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobile-menu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+margin: 0 40px;  
+width: 1107;
+  height: 60px;
+  
+}
+.closebtn{
+  font-size: 28px;
+}
+.menu-icons{
+width: 60px; 
+display: flex;
+gap: 10px;
+  
+}
+.menu-logo{
+width: 72px;
+}
+.mobile-menus{
+  width: 90%;
+max-width: 1107px;
+height: 917px;
+margin: 0 auto;
+padding: 0 0 140px;
+/* border: 2px solid red; */
+}
+.mobile-li{
+  width: 100%;
+  height: 54px;
+  font-size: 14px;
+  border-bottom: 1px solid #e2e2e2;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+}
+.sspan{
+font-size: 15px;}
+.mobile-footer {
+  display: flex;
+  justify-content: center;   
+  align-items: center;      
+  gap: 8px;                 
+  font-size: 14px;
+  color: gray;
+  padding: 20px ;
+  width: 100%;
+  text-align: center;
+}
+
+.mobile-footer span {
+  display: flex;             
+  align-items: center;
+  font-size: 18px;  
+  margin-top: 30px;  
+  margin-bottom: 30px;  
+    
+}
+@media(max-width:1203px){
+  .mobile-menu{
+    display: flex;
+  }
 }

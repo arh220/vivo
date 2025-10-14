@@ -7,44 +7,157 @@ import { BsBagDash } from "react-icons/bs";
 import { PiShoppingCartSimpleLight } from "react-icons/pi";
 import { FiUser } from "react-icons/fi";
 import { HiOutlineMenu, HiOutlineX } from "react-icons/hi";
+import { LuChevronRight } from "react-icons/lu";
+import { FiPlus } from "react-icons/fi";
+import { TbWorld } from "react-icons/tb";
 
 const Navbar = ({ scrolled }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDropDownOpen, setIsDropDownOpen] = useState(false);
   return (
     <>
       <header className={`mainhead ${scrolled ? "scrolled" : ""}`}>
         <div className="navbar-wrapper">
           <div className="brgmenu">
-            <button>
+            <button onClick={() => setIsMobileMenuOpen(true)}>
               {isMobileMenuOpen ? <HiOutlineX /> : <HiOutlineMenu />}
             </button>
           </div>
           <div className="logo">
             <Logo />
           </div>
-          <div className="menu">
+          <div className="menu lihide">
             <ul>
-              <li>Home</li>
-              <li>Products</li>
-              <li>E-store</li>
-              <li>vivo Exclusive store</li>
-              <li>Community</li>
-              <li>Support</li>
-              <li>Funtouch OS</li>
-              <li>Explore vivo</li>
-              <li>iQOOO</li>
+              <li className="lihide">Home</li>
+              <li className="lihide">Products</li>
+              <li className="lihide">E-store</li>
+              <li className="lihide">vivo Exclusive store</li>
+              <li className="lihide">Community</li>
+              <li className="lihide">Support</li>
+              <li className="lihide">Funtouch OS</li>
+              <li className="expvivo">Explore vivo</li>
+              <li className="iqooo">iQOOO</li>
             </ul>
           </div>
-          <div className="icons">
-            <div className="icon">
+          <div className="icons-container">
+            <div className="icon search-icon">
               <SearchIcon />
             </div>
-            <div className="icon">
+
+            <div
+              className="icon user-icon-wrapper"
+              onMouseEnter={() => setIsDropDownOpen(true)}
+              onMouseLeave={() => setIsDropDownOpen(false)}
+            >
               <UserIcon />
+              {isDropDownOpen && (
+                <div className="dropdown">
+                  <ul>
+                    <li>
+                      <BsBagDash />
+                      <span>My Order</span>
+                    </li>
+                    <li>
+                      <PiShoppingCartSimpleLight />
+                      <span>Cart</span>
+                    </li>
+                    <li>
+                      <FiUser />
+                      <span>Sign in/Register</span>
+                    </li>
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
         </div>
       </header>
+
+      {/* mobile view */}
+
+      <div className={`mobile-menu ${isMobileMenuOpen ? "open" : ""}`}>
+        <div className="mobile-menu-header">
+          <div className="">
+            <button
+              className="closebtn"
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              <HiOutlineX />
+            </button>
+          </div>
+          <div className="menu-logo">
+            <Logo />
+          </div>
+          <div className="menu-icons">
+            <SearchIcon />
+            <UserIcon />
+          </div>
+        </div>
+        <div className="mobile-menus">
+          <ul>
+            <li className="mobile-li">
+              Home
+              <span className="sspan">
+                <LuChevronRight />
+              </span>
+            </li>
+            <li className="mobile-li">
+              Productsspa?
+              <span className="sspan">
+                <FiPlus />
+              </span>
+            </li>
+            <li className="mobile-li">
+              E-store
+              <span className="sspan">
+                <LuChevronRight />
+              </span>
+            </li>
+            <li className="mobile-li">
+              vivo Exclusive store
+              <span className="sspan">
+                <LuChevronRight />
+              </span>
+            </li>
+            <li className="mobile-li">
+              Community
+              <span className="sspan">
+                <LuChevronRight />
+              </span>
+            </li>
+            <li className="mobile-li">
+              Support
+              <span className="sspan">
+                <LuChevronRight />
+              </span>
+            </li>
+            <li className="mobile-li">
+              Funtouch OS
+              <span className="sspan">
+                <LuChevronRight />
+              </span>
+            </li>
+            <li className="mobile-li">
+              Explore vivo
+              <span className="sspan">
+                <LuChevronRight />
+              </span>
+            </li>
+            <li className="mobile-li">
+              iQOOO
+              <span className="sspan">
+                <LuChevronRight />
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div className="mobile-footer">
+          <span>
+            <TbWorld />
+          </span>
+          <span>India | Select country/region</span>
+        </div>
+      </div>
     </>
   );
 };
