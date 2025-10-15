@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container1 {
+  max-width: 2560px;
+  width: 100%;
+  background-color: #f5f7fa;
+  overflow: hidden;
+}
+
+.banner-container {
+  max-width: 1600px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 80px;
+  background-color: #f5f7fa;
+}
+
+.banner-mid-wraper {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.banner-mid-title {
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.banner-mid-title span {
+  font-size: 40px;
+  font-weight: 600;
+  color: #000;
+}
+
+.banner-mid-card {
+  width: 100%;
+}
+
+.banner-mid-box {
+  margin-top: 40px;
+  border-radius: 28px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  transition: transform 1000ms, opacity 1000ms;
+}
+
+.banner-mid-img {
+  width: 100%;
+  position: relative;
+}
+
+.banner-mid-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 28px;
+  transition: transform 0.6s ease-in-out;
+}
+
+.banner-mid-box:hover img {
+  transform: scale(1.05);
+}
+
+[data-aos="fade-up"] {
+  transform: translateY(40px);
+  opacity: 0;
+  transition: transform 1000ms, opacity 1000ms;
+}
+
+[data-aos="fade-up"].aos-animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+.sm-banner-container{
+  border:  5px solid rgb(0, 128, 85);
+  width: 100%;
+  max-width: 2560;
+    height: 1167px;
+
+}
+.banner-sm-wraper{
+  max-width: 1440px;
+  width: 100%;
+  height: 100%;
+  border: 5px solid rebeccapurple;
+}
+.banner-sm-title{
+  width: 100%;
+  height: 81px;
+    margin-bottom: 40px;
+
+}
+.disc{
+  font-size: 40px;
+}
+.banner-sm-box{
+  width: 100%;
+  border: 5px solid mediumspringgreen;
+  height: 886px;
+}
+.li1{
+  border: 2px solid red;
+  height: 324.06px;
+  width: 431.33px;
+  position: absolute;
+}
+.img-card{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  background-color: aqua;
+  border-radius: 24px;
+  overflow: hidden;
+}
+.img-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 24px;
+  transition: transform 0.5s ease-in-out;
+}
+.img-card img:hover {
+  transform: scale(1.05);
+}
+[data-aos="fade-up"] {
+  transform: translateY(30px);
+  opacity: 0;
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+[data-aos="fade-up"].aos-animate {
+  transform: translateY(0);
+  opacity: 1;
+}
+.li2{
+  border: 2px solid red;
+  position: relative;
+  /* left: 100px; */
+  display: inline-block;
+  height: 690px;
+
+}
+.banner-sm-img{
+  border: 5px solid green;
+  position: relative;
+  left: 450px;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 24px;
+
+}
+
+

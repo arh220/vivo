@@ -18,6 +18,7 @@ const Layout = ({ scrolled, children }) => {
         <div className="navbar-overlay">
           <Navbar scrolled={isScrolled} />
         </div>
+        <div>{children}</div>
         <div>
           <Footer />
         </div>
