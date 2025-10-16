@@ -43,21 +43,47 @@ const Home = () => {
               <h2 className="banner-sm-title">
                 <span className="disc">DISCOVER</span>
               </h2>
-              <ul className="banner-sm-box">
-                <li className="li1">
-                  <div className="img-card" data-aos="fade-up">
-                    <img src="../../../img/d1.jpg" alt="" />
+            </div>
+            <div className="main-img-container">
+              <div className="div1">
+                <div className="div1-img">
+                  <img className="ifect-img" src="../../../img/d1.jpg" alt="" />
+                </div>
+                <div className="div2-img marg">
+                  <div className="div2-img-box">
+                    <img
+                      className="ifect-img"
+                      src="../../../img/d2.jpg"
+                      alt=""
+                    />
                   </div>
-                </li>
-                <li className="li2">
-                  <div className="banner-sm-img">
-                    <img src="../../../img/d3.jpg" alt="" />
+                  <div>
+                    <h1 className="t4h1 ">T4</h1>
                   </div>
-                </li>
-                <li>3</li>
-                <li>4</li>
-                <li>5</li>
-              </ul>
+                </div>
+              </div>
+              <div className="div1">
+                <div className="maindiv2">
+                  <img className="ifect-img" src="../../../img/d3.jpg" alt="" />
+                </div>
+              </div>
+              <div className="div1">
+                <div className="div2-img">
+                  <div className="div2-img-box">
+                    <img
+                      className="ifect-img"
+                      src="../../../img/d4.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <h1 className="t4h1">TWS 3e</h1>
+                  </div>
+                </div>
+                <div className="div1-img marg">
+                  <img className="ifect-img" src="../../../img/d5.jpg" alt="" />
+                </div>
+              </div>
             </div>
           </div>
         </div>
