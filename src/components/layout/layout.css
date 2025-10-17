@@ -13,7 +13,7 @@
 .headimg{
   width: 100%;
   position: relative;
-border:  1px solid blue;  
+/* border:  1px solid blue;   */
 }
 .headimg img{
   width: 100%;
@@ -23,7 +23,7 @@ border:  1px solid blue;
   top: 0;
   left: 0;
   width: 100%;
-  border: 2px solid red;
+  /* border: 2px solid red; */
   display: flex;
   justify-content: center;
 height: 86px;
@@ -112,7 +112,7 @@ height: 86px;
   align-items: center;
   gap: 24px; 
   position: relative;
-  border: 2px solid red;
+  /* border: 2px solid red; */
 }
 
 .icon {
@@ -273,3 +273,7 @@ font-size: 15px;}
     display: flex;
   }
 }
+
+
+
+

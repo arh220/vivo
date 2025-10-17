@@ -49,7 +49,7 @@ const Home = () => {
                 <div className="div1-img">
                   <img className="ifect-img" src="../../../img/d1.jpg" alt="" />
                 </div>
-                <div className="div2-img marg">
+                <div className="div2-img">
                   <div className="div2-img-box">
                     <img
                       className="ifect-img"
@@ -57,7 +57,7 @@ const Home = () => {
                       alt=""
                     />
                   </div>
-                  <div>
+                  <div className="t4-box">
                     <h1 className="t4h1 ">T4</h1>
                   </div>
                 </div>
@@ -76,11 +76,11 @@ const Home = () => {
                       alt=""
                     />
                   </div>
-                  <div>
+                  <div className="t4-box">
                     <h1 className="t4h1">TWS 3e</h1>
                   </div>
                 </div>
-                <div className="div1-img marg">
+                <div className="div1-img">
                   <img className="ifect-img" src="../../../img/d5.jpg" alt="" />
                 </div>
               </div>

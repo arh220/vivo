@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./layout.css";
 import Navbar from "../navbar/Navbar";
-import Footer from "../footer/Footer";
+import Footer from "../Footer/Footer";
 
 const Layout = ({ scrolled, children }) => {
   const [isScrolled, setIsScrolled] = useState(false);
