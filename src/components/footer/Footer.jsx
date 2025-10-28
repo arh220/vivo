@@ -1,13 +1,16 @@
 import React from "react";
-import { LuPhone, LuMail } from "react-icons/lu";
-import { FaWhatsapp } from "react-icons/fa";
-import { RiChatFollowUpLine } from "react-icons/ri";
-import { FaFacebookF } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaTwitterSquare } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { TbWorld } from "react-icons/tb";
 import "./footer.css";
+import { IoCallOutline } from "react-icons/io5";
+import { BiMessageRoundedDots } from "react-icons/bi";
+import { LuMail } from "react-icons/lu";
+import Fb from "../../assets/fb";
+import Insta from "../../assets/Insta";
+import { RiChatFollowUpLine } from "react-icons/ri";
+import Youtube from "../../assets/Youtube";
+import Twit from "../../assets/Twit";
+import In from "../../assets/In";
+import { TbWorld } from "react-icons/tb";
+import { FiPlus } from "react-icons/fi";
 
 const Footer = () => {
   return (
@@ -74,13 +77,182 @@ const Footer = () => {
                 </ul>
               </div>
             </div>
-
             <div className="contact">
-              <div className="contact-box">1</div>
+              <div className="contact-box">
+                <div className="content-item">
+                  <p>
+                    <span>
+                      <IoCallOutline />
+                    </span>
+                    24*7
+                  </p>
+                  <h1>1800-208-3388</h1>
+                  <p>
+                    <span>
+                      <IoCallOutline />
+                    </span>
+                    24*7
+                  </p>
+                  <h1>1800-102-3388</h1>
+                  <p>
+                    <span>
+                      <IoCallOutline />
+                    </span>
+                    24*7 (Only for X-Series Customers)
+                  </p>
+                  <h1>1800-208-4488</h1>
+                  <p className="itemp">
+                    <span>
+                      <BiMessageRoundedDots />
+                    </span>
+                    WhatsApp (8AM-8PM)
+                  </p>
+                  <p className="itemp">
+                    <span>
+                      <LuMail />
+                    </span>
+                    Email us (Reply in 24h)
+                  </p>
+                  <p className="itemp">
+                    <span>
+                      <BiMessageRoundedDots />
+                    </span>
+                    Chat with us
+                  </p>
+                  <p className="items">
+                    <span>
+                      <RiChatFollowUpLine />
+                    </span>
+                    Follow us
+                  </p>
+                  <p className="footer-icons">
+                    <Fb />
+                    <Insta />
+                    <Youtube />
+                    <Twit />
+                    <In />
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="sm-footer-content">
+            <div className="sm-footer-list">
+              <div className="sm-footer-wap">
+                <ul>
+                  <li className="list">
+                    Popular Link
+                    <span>
+                      <FiPlus />
+                    </span>
+                  </li>
+                  <li className="list">
+                    Purchase Online{" "}
+                    <span>
+                      <FiPlus />
+                    </span>
+                  </li>
+                  <li className="list">
+                    Support{" "}
+                    <span>
+                      <FiPlus />
+                    </span>
+                  </li>
+                  <li className="list">
+                    About vivo
+                    <span>
+                      <FiPlus />
+                    </span>
+                  </li>
+                </ul>
+              </div>
+              <div className="sm-footer-contect">
+                <p>
+                  <span className="icon-size">
+                    <IoCallOutline />
+                  </span>
+                  24*7
+                </p>
+                <h1>1800-208-3388</h1>
+                <p>
+                  <span className="icon-size">
+                    <IoCallOutline />
+                  </span>
+                  24*7
+                </p>
+                <h1>1800-102-3388</h1>
+                <p>
+                  <span className="icon-size">
+                    <IoCallOutline />
+                  </span>
+                  24*7 (Only for X-Series Customers)
+                </p>
+                <h1>1800-208-4488</h1>
+                <p className="itemp">
+                  <span className="icon-size">
+                    <BiMessageRoundedDots />
+                  </span>
+                  WhatsApp (8AM-8PM)
+                </p>
+                <p className="itemp">
+                  <span className="icon-size">
+                    <LuMail />
+                  </span>
+                  Email us (Reply in 24h)
+                </p>
+                <p className="itemp">
+                  <span className="icon-size">
+                    <BiMessageRoundedDots />
+                  </span>
+                  Chat with us
+                </p>
+                <p className="items">
+                  <span className="icon-size">
+                    <RiChatFollowUpLine />
+                  </span>
+                  Follow us
+                </p>
+                <p className="sm-footer-icons">
+                  <span className="span1">
+                    <Fb />
+                  </span>
+                  <span>
+                    <Insta />
+                  </span>
+                  <span>
+                    <Youtube />
+                  </span>
+                  <span>
+                    <Twit />
+                  </span>
+                  <span>
+                    <In />
+                  </span>
+                </p>
+                <p className="sm-footer-end">
+                  <span className="icon-size">
+                    <TbWorld />
+                  </span>
+                  India | Select country/region
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        <div className="footer-end">footer end</div>
+        <div className="footer-end">
+          <div className="footer-end-box">
+            <span>
+              © 2025 vivo Mobile India Pvt Ltd. All rights reserved.
+              &nbsp;|&nbsp; Cookie Policy &nbsp;|&nbsp; Warranty Terms
+            </span>
+            <span className="country-region">
+              India | Select country/region
+              <span className="icon">
+                <TbWorld />
+              </span>
+            </span>
+          </div>
+        </div>
       </div>
     </>
   );
