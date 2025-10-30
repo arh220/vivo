@@ -14,7 +14,9 @@ const Layout = ({ scrolled, children }) => {
   return (
     <div className="container">
       <div className="headimg">
-        <img src="/img/1.jpg" alt="Banner" />
+        <img src="/img/1.jpg" alt="Banner" className="desktop-banner" />
+        <img src="/img/h1.jpg" alt="Banner" className="mobile-banner" />
+
         <div className="navbar-overlay">
           <Navbar scrolled={isScrolled} />
         </div>

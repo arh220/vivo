@@ -14,13 +14,15 @@ import { TbWorld } from "react-icons/tb";
 const Navbar = ({ scrolled }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDropDownOpen, setIsDropDownOpen] = useState(false);
+  const [isMobileUser, setIsMobileUser] = useState(false);
+  console.log(isMobileUser);
   return (
     <>
       <header className={`mainhead ${scrolled ? "scrolled" : ""}`}>
         <div className="navbar-wrapper">
           <div className="brgmenu">
             <button onClick={() => setIsMobileMenuOpen(true)}>
-              {isMobileMenuOpen ? <HiOutlineX /> : <HiOutlineMenu />}
+              {isMobileMenuOpen ? "" : <HiOutlineMenu />}
             </button>
           </div>
           <div className="logo">
@@ -45,29 +47,81 @@ const Navbar = ({ scrolled }) => {
             </div>
 
             <div
-              className="icon user-icon-wrapper"
+              className="desktop-user icon user-icon-wrapper"
               onMouseEnter={() => setIsDropDownOpen(true)}
               onMouseLeave={() => setIsDropDownOpen(false)}
             >
               <UserIcon />
               {isDropDownOpen && (
-                <div className="dropdown">
-                  <ul>
-                    <li>
-                      <BsBagDash />
-                      <span>My Order</span>
-                    </li>
-                    <li>
-                      <PiShoppingCartSimpleLight />
-                      <span>Cart</span>
-                    </li>
-                    <li>
-                      <FiUser />
-                      <span>Sign in/Register</span>
-                    </li>
-                  </ul>
-                </div>
+                <>
+                  <div className="dropdown">
+                    <ul>
+                      <li>
+                        <BsBagDash />
+                        <span>My Order</span>
+                      </li>
+                      <li>
+                        <PiShoppingCartSimpleLight />
+                        <span>Cart</span>
+                      </li>
+                      <li>
+                        <FiUser />
+                        <span>Sign in/Register</span>
+                      </li>
+                    </ul>
+                  </div>
+                </>
               )}
+            </div>
+            <div
+              className="mobile-user-icon icon user-icon-wrapper"
+              onClick={() => !isMobileUser && setIsMobileUser(true)}
+            >
+              <UserIcon />
+              <div className={`mb-main ${isMobileUser ? "open" : ""}`}>
+                <div className={`mb-user-head `}>
+                  <div>
+                    <div className="mb-user-box">
+                      <div>
+                        <button
+                          className="closebtn"
+                          onClick={() => setIsMobileMenuOpen(true)}
+                        >
+                          <HiOutlineMenu />
+                        </button>
+                      </div>
+                      <div className="menu-logo">
+                        <Logo />
+                      </div>
+                      <div className="menu-icons">
+                        <SearchIcon />
+                        <div
+                          style={{ width: "100%" }}
+                          onClick={() => setIsMobileUser(false)}
+                        >
+                          <UserIcon />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="mb-dropdown">
+                    <ul>
+                      <li>
+                        <BsBagDash />
+                        <span>My Order</span>
+                      </li>
+                      <li>
+                        <PiShoppingCartSimpleLight />
+                        <span>Cart</span>
+                      </li>
+                      <li>
+                        <FiUser />
+                        <span>Sign in/Register</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -76,23 +130,26 @@ const Navbar = ({ scrolled }) => {
       {/* mobile view */}
 
       <div className={`mobile-menu ${isMobileMenuOpen ? "open" : ""}`}>
-        <div className="mobile-menu-header">
-          <div className="">
-            <button
-              className="closebtn"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              <HiOutlineX />
-            </button>
-          </div>
-          <div className="menu-logo">
-            <Logo />
-          </div>
-          <div className="menu-icons">
-            <SearchIcon />
-            <UserIcon />
+        <div className="mb">
+          <div className="mobile-menu-header">
+            <div>
+              <button
+                className="closebtn"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                <HiOutlineX />
+              </button>
+            </div>
+            <div className="menu-logo">
+              <Logo />
+            </div>
+            <div className="menu-icons">
+              <SearchIcon />
+              <UserIcon />
+            </div>
           </div>
         </div>
+
         <div className="mobile-menus">
           <ul>
             <li className="mobile-li">
@@ -102,7 +159,7 @@ const Navbar = ({ scrolled }) => {
               </span>
             </li>
             <li className="mobile-li">
-              Productsspa?
+              Products
               <span className="sspan">
                 <FiPlus />
               </span>

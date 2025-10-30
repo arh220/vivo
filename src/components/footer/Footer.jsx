@@ -253,6 +253,18 @@ const Footer = () => {
             </span>
           </div>
         </div>
+        <div className="sm-footer-end-box">
+          <div className="sm-footer-last">
+            <p>
+              <span>
+                © 2025 vivo Mobile India Pvt Ltd. All rights reserved.
+              </span>
+            </p>
+            <p>
+              <span> Cookie Policy &nbsp;|&nbsp; Warranty Terms</span>
+            </p>
+          </div>
+        </div>
       </div>
     </>
   );

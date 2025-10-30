@@ -25,13 +25,31 @@ const Home = () => {
             <div className="banner-mid-card">
               <div className="banner-mid-box" data-aos="fade-up">
                 <div className="banner-mid-img">
-                  <img src="../../../img/2.jpg" alt="1" />
+                  <img
+                    src="../../../img/2.jpg"
+                    alt="1"
+                    className="desktop-img-banner"
+                  />
+                  <img
+                    src="../../../img/h2.jpg"
+                    alt="1"
+                    className="mobile-img-banner"
+                  />
                 </div>
               </div>
 
               <div className="banner-mid-box" data-aos="fade-up">
                 <div className="banner-mid-img">
-                  <img src="../../../img/3.jpg" alt="2" />
+                  <img
+                    src="../../../img/3.jpg"
+                    alt="2"
+                    className="desktop-img-banner"
+                  />
+                  <img
+                    src="../../../img/h3.jpg"
+                    className="mobile-img-banner"
+                    alt="2"
+                  />
                 </div>
               </div>
             </div>
